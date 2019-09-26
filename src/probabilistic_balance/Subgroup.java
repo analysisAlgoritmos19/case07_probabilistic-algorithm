@@ -42,4 +42,17 @@ public class Subgroup {
             this.NumbersOfSubgroup.add(randNum);
         }
     }
+    
+    public void printNumberArray(ArrayList<Integer> arrayListOfNumbers){
+        for (int element:arrayListOfNumbers) {
+            System.out.println(element);
+        }
+    }
+
+    public void printCharArray(ArrayList<Character> arrayListOfChars){
+        for (char element:arrayListOfChars) {
+            System.out.println(element);
+        }
+    }
+    
 }
