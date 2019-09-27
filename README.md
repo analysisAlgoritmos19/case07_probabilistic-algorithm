@@ -5,7 +5,7 @@
 This project is meant to develop a probabilistic algorithm in order to get the possible missing values of AES/ECB/PKCS5Padding 
 cypher algorithm key.
 
-========Description of the probabilityalgorithm
+========Description of the probability algorithm
 
 For obtaining the possible missing values of the key, we design a solution that creates "n" amount of subgroups with "m" amount
 of numbers and "p" amount of letters. Then, the subgroups are tested in the decrypt method of the AES algorithm (using 
