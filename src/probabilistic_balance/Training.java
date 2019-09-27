@@ -1,3 +1,4 @@
+
 package probabilistic_balance;
 
 import java.util.ArrayList;
@@ -5,18 +6,18 @@ import java.util.ArrayList;
 import aes_ecb_pkcs5padding.CodeAndDecode;
 
 public class Training {
-	
+
 	int AmountOfSubgroups = 100;
     ArrayList<Subgroup> SubgroupsForTraining;
     ArrayList<Subgroup> SubgroupsWithSucceed;
-
+    
     public Training() {
         SubgroupsForTraining = new ArrayList<>();
         setSubgroupsForTraining();
         SubgroupsWithSucceed = new ArrayList<>();
         setSucceedSubgroups();
-    }
 
+    }
 
     public ArrayList<Subgroup> getSubgroupsWithSucceed() {
         return SubgroupsWithSucceed;
@@ -31,8 +32,8 @@ public class Training {
             Subgroup subgroup = new Subgroup();
             this.SubgroupsForTraining.add(subgroup);
         }
-    }
-    
+    }    
+
     public boolean verifySubgroupForKey(Subgroup subgroup) {
 
         String encryptedMessage = "xZwM7BWIpSjYyGFr9rhpEa+cYVtACW7yQKmyN6OYSCv0ZEg9jWbc6lKzzCxRSSIvOvlimQZBMZOYnOwiA9yy3YU8zk4abFSItoW6Wj0ufQ0=";
@@ -51,6 +52,7 @@ public class Training {
                     if (result){
                         return true;
                     }
+
                 }
 
             }
@@ -65,12 +67,14 @@ public class Training {
             if(verifySubgroupForKey(subgroup)){
 
                 this.SubgroupsWithSucceed.add(subgroup);
-            }
 
+            }
+            
         }
     }
 
     public void printSucceedSubgroups(){
+
         for (Subgroup subgroup:this.SubgroupsWithSucceed) {
             System.out.println("Subgroup with succeed: ");
             System.out.println("List of numbers: ");
@@ -96,5 +100,5 @@ public class Training {
         training.printSucceedSubgroups();
 
     }
-    
+
 }
