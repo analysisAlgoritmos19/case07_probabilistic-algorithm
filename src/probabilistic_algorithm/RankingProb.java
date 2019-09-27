@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import probabilistic_balance.Subgroup;
 import probabilistic_balance.Training;
+import utils.HashHighValues;
 import utils.Union;
 
 public class RankingProb {
@@ -19,6 +20,7 @@ public class RankingProb {
         SampleTraining = new Training();
         AllNumbers = new ArrayList<>();
         AllLetters = new ArrayList<>();
+        getAllNumbersAndLetters();
         NumberProbability = new HashMap<>();
         LetterProbability = new HashMap<>();
         createRankingProb();
@@ -64,14 +66,31 @@ public class RankingProb {
         AllNumbers = allNumbers;
     }
     
-    public void giveProbable() {
-    	
-    	//Falta obtener la probabilidad de las letras y los numeros
-    	
-    	LetterProbability = null;
-    	
-    	NumberProbability = null;
-    	
+    public void printNumbersHash(){
+        this.NumberProbability.forEach((k,v)->{
+            System.out.println("The number: "+k+" has: "+v+" probability");
+        });
     }
+    public void printLetterHash(){
+        this.LetterProbability.forEach((k,v)->{
+            System.out.println("The letter: "+k+" has: "+v+" probability");
+        });
+    }
+
+    public void giveProbableAns(){
+        System.out.println("The suggested letters to choose are given in descendent order: ");
+        LetterProbability = (HashMap<Character, Float>) HashHighValues.sortByValue(LetterProbability);
+        printLetterHash();
+        System.out.println("The suggested numbers to choose are given in descendent order: ");
+        NumberProbability = (HashMap<Integer, Float>) HashHighValues.sortByValue(NumberProbability);
+        printNumbersHash();
+    }
+
+    public static void main (String [] args){
+        RankingProb rankingProb = new RankingProb();
+        rankingProb.giveProbableAns();
+    }
+    
+    
     
 }
