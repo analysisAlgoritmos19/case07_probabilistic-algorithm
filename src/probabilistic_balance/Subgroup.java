@@ -54,5 +54,16 @@ public class Subgroup {
             System.out.println(element);
         }
     }
+   
+    public static void main (String [] args){
+
+        Subgroup subgroup = new Subgroup();
+        subgroup.printCharArray(subgroup.LettersOfSubgroup);
+        subgroup.printNumberArray(subgroup.NumbersOfSubgroup);
+    }
+
+    
+    
+    
     
 }
