@@ -1,6 +1,6 @@
 # case07_probabilistic-algorithm
 
-========Objective ofalgorithm
+========Objective of algorithm
 
 This project is meant to develop a probabilistic algorithm in order to get the possible missing values of AES/ECB/PKCS5Padding 
 cypher algorithm key.
@@ -13,7 +13,7 @@ cartesian product between the numbers and letters). Those subgroups whose elemen
 of the successful subgroups are evaluated. We count the amount of times an element appears in this subgroups, and based on
 the repetition the suggestion table is created.
 
-=========Using thealgorithm
+=========Using the algorithm
 
 For running the algorithm:
       Run the main method of the class RankiningProb.java
@@ -22,7 +22,7 @@ Output:
       The out will be two tables, one for number and other for letters, showing the probability percentaje of each element in
       descending order (form more probable to less probable).
 
-=========Modifing values inalgorithm
+=========Modifing values in algorithm
 
 For modifing the amount of subgroups:
       Edit the atribute AmountOfSubgroups (located in src/probabilistic_balance/Training)
